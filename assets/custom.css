@@ -1,0 +1,494 @@
+/* Custom CSS for Web Research Agent */
+
+/* Global body styling */
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #f0f0f0;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Override Gradio container styles */
+.gradio-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    background-color: transparent !important;
+}
+
+/* Button styling overrides */
+.primary-btn {
+    background: linear-gradient(90deg, #3a7bd5, #00d2ff) !important;
+    color: white !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Input field styling overrides */
+textarea, input[type="text"] {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+textarea:focus, input[type="text"]:focus {
+    border-color: #3a7bd5 !important;
+    box-shadow: 0 0 0 2px rgba(58, 123, 213, 0.3) !important;
+}
+
+/* Chat bubbles */
+.message-bubble {
+    background-color: rgba(42, 46, 53, 0.8) !important;
+    border-radius: 12px !important;
+}
+
+.user-bubble {
+    background-color: rgba(48, 66, 105, 0.8) !important;
+}
+
+/* Main container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+h1.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+    -webkit-background-clip: text; /* Prefix for older WebKit */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Chatbot container */
+.chatbot-container {
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Chat messages */
+.message {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #304269;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.bot-message {
+    background-color: #2a2e35;
+    color: #eaeaea;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+/* Input box styling */
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.input-box {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 16px;
+    font-size: 16px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.input-box:focus {
+    border-color: #3a7bd5;
+    box-shadow: 0 0 0 2px rgba(58, 123, 213, 0.3);
+    outline: none;
+}
+
+/* Button styling */
+.search-button {
+    background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.clear-button {
+    background: transparent;
+    color: #adadad;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clear-button:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+/* Examples section */
+.examples-container {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.examples-container h3 {
+    margin-top: 0;
+    color: #b8b9bd;
+    font-size: 1rem;
+}
+
+.example-item {
+    padding: 8px 12px;
+    background: rgba(58, 123, 213, 0.1);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.example-item:hover {
+    background: rgba(58, 123, 213, 0.2);
+}
+
+/* Loading indicator */
+.loading-indicator {
+    display: inline-block;
+    margin-left: 10px;
+    color: #3a7bd5;
+}
+
+/* Citation and source styling */
+.citation {
+    font-size: 0.85rem;
+    color: #6c757d;
+    background-color: rgba(108, 117, 125, 0.1);
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+.source-list {
+    font-size: 0.9rem;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #b8b9bd;
+}
+
+/* Warning messages */
+.warning {
+    background-color: rgba(255, 207, 0, 0.1);
+    border-left: 4px solid #ffcf00;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+/* Footer styling */
+.footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #b8b9bd;
+}
+
+/* Markdown content styling */
+.md-container {
+    line-height: 1.6;
+}
+
+.md-container code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.md-container pre {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Avatar styling */
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Dark mode specific adjustments */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1c23;
+        color: #f0f0f0;
+    }
+    
+    .input-box {
+        background: rgba(255, 255, 255, 0.03);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Progress indicator styling */
+.progress-step {
+    margin: 10px 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgba(58, 123, 213, 0.1);
+    transition: all 0.3s ease;
+}
+
+.progress-step.completed {
+    background-color: rgba(0, 210, 255, 0.15);
+}
+
+.progress-check {
+    color: #00d2ff;
+    margin-left: 8px;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.loading-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3a7bd5;
+    margin: 0 2px;
+    animation: pulse 1.5s infinite;
+}
+
+.loading-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Message content styling - improve readability */
+.message-content {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Code blocks in messages */
+.message-content pre {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.message-content code {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+/* Improve citation styling */
+.citation {
+    background-color: rgba(58, 123, 213, 0.2);
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #b8cff5;
+    margin: 0 2px;
+    font-size: 0.9em;
+}
+
+/* Source list at the end of responses */
+.source-list {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.source-list ol {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.source-list li {
+    margin-bottom: 5px;
+}
+
+/* Make links more visible */
+a {
+    color: #00d2ff;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #3a7bd5;
+}
+
+/* Add app logo/header styling */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.app-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1.title {
+        font-size: 1.8rem;
+    }
+    
+    .chatbot-container {
+        height: 70vh;
+    }
+    
+    .message {
+        max-width: 90%;
+    }
+}
+
+/* Chatbot container and message styling */
+.gradio-container .prose {
+    max-width: 100% !important; /* Override max-width constraint */
+}
+
+/* Target the chatbot messages directly */
+.chatbot .message {
+    padding: 15px !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* User messages */
+.chatbot .user {
+    background-color: #304269 !important;
+    color: white !important;
+    border-bottom-right-radius: 2px !important;
+}
+
+/* Bot messages */
+.chatbot .bot {
+    background-color: #2a2e35 !important;
+    color: #eaeaea !important;
+    border-bottom-left-radius: 2px !important;
+}
+
+/* Apply primary gradient to buttons */
+button.primary {
+    background: linear-gradient(90deg, #3a7bd5, #00d2ff) !important;
+    color: white !important;
+}
+
+/* Style the chatbot container */
+.chatbot-container > div {
+    border-radius: 12px !important;
+    background: rgba(31, 41, 55, 0.4) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Fix scrollbar in chat */
+.chatbot ::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.chatbot ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.chatbot ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 4px !important;
+}
+
+/* Style the copy button */
+.copy-button {
+    background-color: rgba(58, 123, 213, 0.2) !important;
+    color: #b8cff5 !important;
+}
+
+/* Fix mobile responsiveness */
+@media (max-width: 640px) {
+    .gradio-container {
+        padding: 10px !important;
+    }
+    
+    .container {
+        padding: 10px !important;
+    }
+} 
